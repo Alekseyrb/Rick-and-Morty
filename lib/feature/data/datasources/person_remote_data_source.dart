@@ -9,10 +9,10 @@ abstract class PersonRemoteDataSource {
   Future<List<PersonModel>> searchPerson(String query);
 }
 
-class PersonRemoteDataSourseImpl implements PersonRemoteDataSource {
+class PersonRemoteDataSourceImpl implements PersonRemoteDataSource {
   final http.Client client;
 
-  PersonRemoteDataSourseImpl({required this.client});
+  PersonRemoteDataSourceImpl({required this.client});
   @override
   Future<List<PersonModel>> getAllPersons(int page) => _getPersonFromUrl(
       'https://rickandmortyapi.com/api/character/?page=$page');
